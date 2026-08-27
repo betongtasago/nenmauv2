@@ -1,4 +1,4 @@
-import { verifyGmailRelay } from '../../gmailRelay';
+import { verifyGmailRelay } from '../../gmailRelay.js';
 
 export const config = {
   api: {

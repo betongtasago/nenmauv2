@@ -1,4 +1,4 @@
-import { sendViaGmailRelay } from '../../gmailRelay';
+import { sendViaGmailRelay } from '../../gmailRelay.js';
 
 export const config = {
   api: {

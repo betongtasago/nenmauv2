@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-import { sendViaGmailRelay } from '../gmailRelay';
-import { buildProfessionalEmail } from '../emailTemplate';
+import { sendViaGmailRelay } from '../gmailRelay.js';
+import { buildProfessionalEmail } from '../emailTemplate.js';
 
 const TIME_ZONE = 'Asia/Ho_Chi_Minh';
 const isEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
