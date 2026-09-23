@@ -409,7 +409,10 @@ async function startServer() {
   }
 
   const app = express();
-  const PORT = 3000;
+  // Render assigns the listening port through PORT. Keep 3000 as the local
+  // development fallback, but never bind a fixed port in production.
+  const configuredPort = Number(process.env.PORT || 3000);
+  const PORT = Number.isInteger(configuredPort) && configuredPort > 0 ? configuredPort : 3000;
 
   // JSON & URL-encoded parsers
   app.use(express.json({ limit: '10mb' }));
